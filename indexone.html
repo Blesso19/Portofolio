@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SME Portfolio — Creative & Glassy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f9fb;
+      --glass: rgba(255,255,255,0.55);
+      --accent-a:#3751ff; /* bluish */
+      --accent-b:#9b2cff; /* purplish */
+      --text:#09203f;
+      --muted:#6b7a90;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;padding:40px;background:var(--bg);color:var(--text)}
+    .wrap{max-width:1200px;margin:0 auto}
+    /* navbar */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo-mark{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--accent-a),var(--accent-b));display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
+    nav a{margin:0 12px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav a.cta{padding:8px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent-a),var(--accent-b));color:white}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 460px;align-items:center;gap:40px;margin-top:20px}
+    .intro small{color:var(--muted);letter-spacing:1px}
+    h1{font-size:48px;margin:10px 0 8px;line-height:1.03}
+    p.lead{color:var(--muted);max-width:520px}
+    .buttons{margin-top:22px}
+    .btn{display:inline-block;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--accent-a),var(--accent-b));color:#fff}
+    .btn.ghost{background:transparent;border:2px solid rgba(9,32,63,0.06);color:var(--text)}
+
+    /* hero right - blob */
+    .hero-right{position:relative;height:480px}
+    .blob{position:absolute;right:0;top:0;width:480px;height:480px;border-radius:48% 52% 44% 56%/56% 44% 56% 44%;background:linear-gradient(135deg,var(--accent-a),var(--accent-b));filter:drop-shadow(0 20px 40px rgba(59,37,121,0.15));overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .blob::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%, rgba(255,255,255,0.06), transparent 20%), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.03), transparent 25%)}
+    .profile{
+      position:relative;z-index:2;width:320px;height:420px;background:transparent;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px rgba(9,16,40,0.12);transform:translateY(18px)
+    }
+
+    /* glass stats */
+    .stats{display:flex;gap:16px;margin-top:34px}
+    .stat{background:var(--glass);backdrop-filter:blur(8px);padding:18px;border-radius:12px;min-width:130px;text-align:center;box-shadow:0 6px 18px rgba(18,25,40,0.05)}
+    .stat strong{display:block;font-size:20px;color:var(--accent-a)}
+    .stat span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+
+    /* projects */
+    section.projects{margin-top:60px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(11,28,60,0.04)}
+    .card img{width:100%;height:150px;object-fit:cover;border-radius:10px}
+    .card h4{margin:12px 0 6px}
+    .card p{color:var(--muted);font-size:14px}
+
+    /* contact */
+    footer{margin-top:48px;padding:28px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.7),rgba(255,255,255,0.6));box-shadow:0 12px 40px rgba(10,18,40,0.04);display:flex;align-items:center;justify-content:space-between}
+    .contact-form{display:flex;gap:12px}
+    .contact-form input,.contact-form textarea{padding:12px;border-radius:10px;border:1px solid rgba(7,14,28,0.06);min-width:240px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .hero-right{height:360px;margin-top:30px}
+      .blob{position:relative;margin:0 auto;left:auto;right:auto}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      body{padding:20px}
+      h1{font-size:34px}
+      .grid{grid-template-columns:1fr}
+      nav a{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><div class="logo-mark">S</div><div>SME<span style="color:var(--muted);font-weight:500;margin-left:6px">Portfolio</span></div></div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <small>HEY THERE !</small>
+          <h1>I AM JO BREED
+            <div style="font-size:18px;color:var(--muted);font-weight:600">Creative Art Director & Designer</div>
+          </h1>
+          <p class="lead">I build beautiful, functional digital experiences for small and medium businesses — branding, UI/UX and web apps that convert users into customers.</p>
+          <div class="buttons">
+            <a class="btn primary" href="#projects">See My Work</a>
+            <a class="btn ghost" href="#contact" style="margin-left:12px">Hire Me</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><strong>15k+</strong><span>Happy Customers</span></div>
+            <div class="stat"><strong>12k+</strong><span>Tickets Solved</span></div>
+            <div class="stat"><strong>9/10</strong><span>Average Rating</span></div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="blob">
+            <!-- Replace `profile.jpg` with your image. Suggested size ~1000x1200. -->
+            <img class="profile" src="profile.jpg" alt="Profile">
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <h3>Selected Projects</h3>
+        <div class="grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/a/800/500" alt="project">
+            <h4>Brand Refresh for Local Cafe</h4>
+            <p>Logo, packaging and website that increased footfall by 23%.</p>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/b/800/500" alt="project">
+            <h4>eCommerce UX Overhaul</h4>
+            <p>Performance & conversion focussed redesign for an SME retailer.</p>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/c/800/500" alt="project">
+            <h4>Landing Page Campaign</h4>
+            <p>High-converting landing page for a product launch.</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="contact">
+      <div>
+        <h4>Let's collaborate</h4>
+        <p style="color:var(--muted)">Available for freelance and full-time work. Reach me at <strong>+91 7012018856</strong></p>
+      </div>
+      <form class="contact-form">
+        <input placeholder="Your name">
+        <input placeholder="Email">
+        <textarea placeholder="Message" rows="2"></textarea>
+        <button class="btn primary" style="align-self:center;margin-left:8px;">Send</button>
+      </form>
+    </footer>
+  </div>
+</body>
+</html>
